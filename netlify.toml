@@ -1,8 +1,0 @@
-[build]
-  command = "python manage.py collectstatic --noinput" 
-  publish = "static"
-  
-[[redirects]]
-  from = "/*"  # Redirecionar todas as solicitações para a HTML base
-  to = "templates\base.html"  # Caminho para a HTML base
-  status = 200
