@@ -44,7 +44,7 @@ class Detalhefilme(DetailView):
         return context
     
 class Homecategoriaacao(ListView):
-    template_name = 'homecategoriaacao.html'git 
+    template_name = 'homecategoriaacao.html'
     model = Filme
     
 class Homecategoriaficcao(ListView):
