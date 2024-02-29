@@ -1,1 +1,1 @@
-web: Filmoteca.wsgi
+web: filmoteca.wsgi
