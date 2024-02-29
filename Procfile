@@ -1,1 +1,1 @@
-web: Filmoteca.wsgi --log-file -
+web: Filmoteca.wsgi
