@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="py-12">
+  <h1 class="text-2xl text-center">Filmes de ação</h1>
+</div>
+<div class="wrapper py-5 bg-cyan-900 m-3">
+
+  <!-- Adicione um ID à seção de filmes -->
+  <section id="lista-filmes" class=" m-2 flex justify-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      {% for filme in pag_acao %}
+      <div class="filme flex flex-col items-center">
+          <a href="{% url 'filme:detalhefilme' filme.pk %}">
+              <img src="{{ filme.thumb.url }}" class='img-fluid w-30 h-60 py-1 m-4' alt="Describe Image">
+              <h1 class="text-center text-xs font-light mt-2"> {{ filme.titulo }} </h1>
+          </a>
+      </div>
+      {% endfor %}
+  </section>
+
+  <!-- Botão "Mostrar mais" -->
+  <button id="botao-mostrar-mais" class="block mx-auto mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Mostrar Mais</button>
+
+</div>
+
+<script>
+  // Número inicial de filmes exibidos e incremento por clique
+  let numFilmesExibidos = 10;
+  const incremento = 10;
+
+  // Função para mostrar mais filmes ao clicar no botão "Mostrar mais"
+  document.getElementById('botao-mostrar-mais').addEventListener('click', () => {
+      // Seleciona todos os elementos de filme
+      const filmes = document.querySelectorAll('.filme');
+      
+      // Exibe mais 10 filmes
+      for (let i = numFilmesExibidos; i < numFilmesExibidos + incremento && i < filmes.length; i++) {
+          filmes[i].classList.remove('hidden');
+      }
+      
+      // Incrementa o número de filmes exibidos
+      numFilmesExibidos += incremento;
+      
+      // Esconde o botão se todos os filmes foram exibidos
+      if (numFilmesExibidos >= filmes.length) {
+          document.getElementById('botao-mostrar-mais').classList.add('hidden');
+      }
+  });
+
+  // Esconde todos os filmes além dos 10 primeiros inicialmente
+  const filmes = document.querySelectorAll('.filme');
+  for (let i = numFilmesExibidos; i < filmes.length; i++) {
+      filmes[i].classList.add('hidden');
+  }
+</script>
+{% endblock %}
