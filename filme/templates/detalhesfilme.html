@@ -7,6 +7,18 @@
     <div class="flex-col">
         <h1 class="text-4xl md:text-5xl px-8 mt-4">{{ object }}</h1>
         <h6 class="px-8"> {{ filme.get_categoria_display }} </h6>
+        <div class="px-10">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '1e1965d6b73203daa89fc4591c4a6643',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+                document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/1e1965d6b73203daa89fc4591c4a6643/invoke.js"></scr' + 'ipt>');
+            </script>
+        </div>
             <div class="flex px-4 py-3 ">
                 <div class="flex-col px-4 py-5 m-2 bg-cyan-900 filme">
                     <p class="text-center"> Sinopse </p>
@@ -27,7 +39,20 @@
                             {% for v in object.video.all %}
                             <iframe width="380" height="215" src="{{ v.trailer }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             {% endfor %}
+                            <div class="m-4">
+                                <script type="text/javascript">
+                                    atOptions = {
+                                        'key' : '71f4334b891f9b35bbd31c68aba7eb90',
+                                        'format' : 'iframe',
+                                        'height' : 50,
+                                        'width' : 320,
+                                        'params' : {}
+                                    };
+                                    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/71f4334b891f9b35bbd31c68aba7eb90/invoke.js"></scr' + 'ipt>');
+                                </script>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
