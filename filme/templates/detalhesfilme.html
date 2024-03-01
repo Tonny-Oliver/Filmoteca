@@ -5,9 +5,7 @@
 {% block content %}
 <section class="h-full ">
     <div class="flex-col">
-        <h1 class="text-4xl md:text-5xl px-8 mt-4">{{ object }}</h1>
-        <h6 class="px-8"> {{ filme.get_categoria_display }} </h6>
-        <div class="px-10">
+        <div class="flex items-center justify-center py-4">
             <script type="text/javascript">
                 atOptions = {
                     'key' : '1e1965d6b73203daa89fc4591c4a6643',
@@ -17,12 +15,16 @@
                     'params' : {}
                 };
                 document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/1e1965d6b73203daa89fc4591c4a6643/invoke.js"></scr' + 'ipt>');
-            </script>
+                </script>
         </div>
-            <div class="flex px-4 py-3 ">
+        <h1 class="text-4xl md:text-5xl px-8 mt-4">{{ object }}</h1>
+        <h6 class="px-8 m-1"> {{ filme.get_categoria_display }} </h6>
+        <div class="flex px-4 py-3 ">
                 <div class="flex-col px-4 py-5 m-2 bg-cyan-900 filme">
                     <p class="text-center"> Sinopse </p>
+                    
                     <p class="py-5">{{ object.descricao }}</p> 
+                    
                     <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
                         {% for i in object.video.all %}
                             <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="{{ i.video }}" width="100%" height="100%" allowfullscreen></iframe>		
@@ -61,6 +63,18 @@
     </div>
 </section>
 <section>
+    <div class="flex items-center justify-center m-1">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '1e1965d6b73203daa89fc4591c4a6643',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/1e1965d6b73203daa89fc4591c4a6643/invoke.js"></scr' + 'ipt>');
+        </script>
+    </div>
     <h2 class="underline decoration-double text-center">Relacionados</h2>
     <div class="filme flex bg-cyan-900 m-8 items-center justify-center">
         {% for filme in filmes_relacionados %}
@@ -71,6 +85,16 @@
             </a>
         </div>
         {% endfor %}
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a88e4ea9d24ab32786a787a5663d28c1',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/a88e4ea9d24ab32786a787a5663d28c1/invoke.js"></scr' + 'ipt>');
+        </script>
     </div>
 
 </section>
