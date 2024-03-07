@@ -2,10 +2,85 @@
 {% load static %}
 <style>
     /* Estilos CSS personalizados */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('{% static 'image\fundo.jpg' %}');
+        background-size: cover;
+        background-attachment: fixed; /* Fundo fixo */
+    }
+
     .filme {
         border: 1px solid #ccc;
         padding: 10px;
         margin-bottom: 10px;
+    }
+    
+    
+    /* Estilos personalizados */
+    .container {
+        border-radius: 16px !important;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px; /* Adiciona espaço entre os elementos */
+    }
+
+    .image {
+        overflow: hidden;
+        border-radius: 16px !important;
+    }
+
+    .image img {
+        width: 230px;
+        height: 330px;
+        display: block;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .content {
+        background-color: #1f1f1f;
+        padding: 20px;
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .content h2 {
+        color: #29b6f6;
+        font-size: 24px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .content p {
+        color: #bdbdbd;
+        font-size: 18px;
+        line-height: 1.5;
+        transition: color 0.3s ease-in-out;
+    }
+
+    /* Efeito de hover */
+    .image:hover img {
+        transform: scale(1.1);
+    }
+
+    .content:hover h2,
+    .content:hover p {
+        color: #286769; /* Mudança de cor ao passar o mouse */
+    }
+
+    .btn {
+        background-color: #ffffff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        transition: color 0.3s ease-in-out; /* Transição de cor suave */
+        cursor: pointer;
+    }
+
+    /* Efeito de hover no botão */
+    .btn:hover {
+        color: #fbfcfd; /* Nova cor ao passar o mouse */
     }
   </style>
 <html>
@@ -19,14 +94,12 @@
         <script src="https://cdn.tailwindcss.com"></script>
         {% block head %}
         {% endblock %}
-        <script type='text/javascript' src='//pl22709372.profitablegatecpm.com/7e/b3/21/7eb321aba962ca8f784e7ea0ff1f4926.js'></script>
 </head>
     <body class="bg-neutral-900 text-gray-100">
         {% include 'navbar.html' %}
         {% block content %}
         {% endblock %}
-        <script async="async" data-cfasync="false" src="//pl22709415.profitablegatecpm.com/0b166ec55964dc5346cc93a33dc02002/invoke.js"></script>
-        <div id="container-0b166ec55964dc5346cc93a33dc02002"></div>
+
         <footer>
   <div class="bg-black py-3 mt-4 flex-col">
       <p class="text-center underline overline decoration-red-800"> E-mail para contato de criação de apps e sites <span class="v font-bold underline">ctt.tonny@gmail.com</span></p>

@@ -1,4 +1,5 @@
 from .models import Filme
+from time import time
 
 def adicionados_recentemente(request):
     # seleção de adicionados rescentemente

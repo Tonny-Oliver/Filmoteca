@@ -13,7 +13,7 @@
       {% for filme in pag_suspense %}
       <div class="filme flex flex-col items-center">
           <a href="{% url 'filme:detalhefilme' filme.pk %}">
-              <img src="{{ filme.thumb.url }}" class='img-fluid w-30 h-60 py-1 m-4' alt="Describe Image">
+            <div class="image image-container"><img src="{{ filme.thumb.url }}" class='img-fluid w-45 h-80' alt="Describe Image"></div>
               <h1 class="text-center text-xs font-light mt-2"> {{ filme.titulo }} </h1>
           </a>
       </div>
