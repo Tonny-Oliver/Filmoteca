@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import Homefilmes, Detalhefilme, Homecategoriaacao, Homecategoriaficcao, Homecategoriaanimacao, Homecategoriasuspense, Pesquisafilme, Homecategoriacomedia, Homecategoriadrama, Homecategoriadocumentario, Homecategoriaromance, Homecategoriaterror
+from .views import Homefilmes, Detalhefilme, Homecategoriaacao, Homecategoriaficcao, Homecategoriaanimacao, Homecategoriasuspense, Pesquisafilme, Homecategoriacomedia, Homecategoriadrama, Homecategoriadocumentario, Homecategoriaromance, Homecategoriaterror, Homecategoriatodos
 
 
 
@@ -19,4 +19,5 @@ urlpatterns = [
     path('filmes/terror/', Homecategoriaterror.as_view(), name='homecategoriaterror'),
     path('filmes/documentario/', Homecategoriadocumentario.as_view(), name='homecategoriadocumentario'),
     path('filmes/romance/', Homecategoriaromance.as_view(), name='homecategoriaromance'),
+    path('filmes/todos/', Homecategoriatodos.as_view(), name='homecategoriatodos'),
 ]

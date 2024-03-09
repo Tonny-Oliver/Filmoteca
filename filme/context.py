@@ -1,7 +1,10 @@
 from .models import Filme
 from time import time
 
-def adicionados_recentemente(request):
+def adicionados_recentemente(request): 
+    todos = Filme.objects.all().order_by('-data_criacao')
+    todos_5 = Filme.objects.all().order_by('?')[0:5]
+
     # seleção de adicionados rescentemente
     recentes = Filme.objects.all().order_by('-data_criacao')[0:5]
 
@@ -19,7 +22,7 @@ def adicionados_recentemente(request):
     
     return {'adicionados_recentemente': recentes, 'lista_acao': acao, 'lista_animacao': animacao, 'lista_aventura': aventura, 
             'lista_ficcao': ficcao, 'lista_suspense': suspense, 'lista_terror': terror, 'vistos': vistos, 'drama': drama,
-            }
+            'todos_5': todos_5, 'todos': todos}
 
 def pag_filmes(request):
 
