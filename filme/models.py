@@ -4,7 +4,6 @@ from django.utils import timezone
 
 LISTA_CATEGORIA = (
     ('acao', 'Ação'),
-    ('aventura', 'Aventura'),
     ('animacao', 'Animação'),
     ('comedia', 'Comedia'),
     ('ficcao', 'Ficção científica'),

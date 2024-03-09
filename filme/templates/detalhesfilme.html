@@ -41,12 +41,12 @@
     </div>
 </section>
 <section>
-    <h2 class="underline decoration-double text-center">Relacionados</h2>
+    <h2 class="underline decoration-double text-center">Outros</h2>
     <div class="filme flex bg-cyan-900 m-8 items-center justify-center">
-        {% for filme in filmes_relacionados %}
+        {% for filme in todos_5 %}
         <div class="m-2">
             <a href=" {% url 'filme:detalhefilme' filme.pk %} ">
-                <img src="{{ filme.thumb.url }}" class="img-fluid w-30 h-60 py-1 m-2">
+                <div class="image image-container"><img src="{{ filme.thumb.url }}" class='img-fluid w-45 h-80' alt="Describe Image"></div>
                 <h1 class="text-center text-xs font-light mt-2"> {{ filme.titulo }} </h1>
             </a>
         </div>
