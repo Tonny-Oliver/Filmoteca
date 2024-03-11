@@ -1,12 +1,21 @@
 {% load static %}
 
 <nav class="w-full flex justify-between items-center px-1 py-2 fixed z-50 bg-black filme">
-    <div class="w-1/12 px-3">
+    <div class="flex flex-nowrap">
+      <div class="m-2">
         <a href="/">
-            <h3 class="underline font-bold text-center">
-                Filmoteca
-            </h3>
+          <h3 class="underline font-bold text-center">
+            Filmoteca
+          </h3>
         </a>
+      </div>  
+      <!-- <div class="m-2">  
+        <a href="#">
+          <h3 class="underline font-bold text-center">
+            FilmotecaTV
+          </h3>
+        </a>
+      </div> -->
     </div>
     <div class="w-6/12 flex flex-nowrap justify-end">
         <div class="mr-2">
@@ -24,8 +33,8 @@
 <div class="bg-slate-200 py-2.5 text-center"> <p> . </p> </div>
 <div class="flex space-x-7 py-2 bg-cyan-900 justify-center items-center">
 
-    <a href="/">
-      <button class="font-bold bg-slate-800 text-white py-1 px-3 rounded-md  mt-1 btn">Inicio</button>
+    <a href="{% url 'filme:homecategoriatodos' %}">
+      <button class="font-bold bg-slate-800 text-white py-1 px-3 rounded-md  mt-1 btn">Todos</button>
     </a>
 
     <a href="{% url 'filme:homecategoriaacao' %}">

@@ -78,6 +78,8 @@ class Homecategoriadocumentario(ListView):
 class Homecategoriaromance(ListView):
     template_name = 'homecategoriaromance.html'
     model = Filme
-
+class Homecategoriatodos(ListView):
+    template_name = 'homecategoriatodos.html'
+    model = Filme
 
 
