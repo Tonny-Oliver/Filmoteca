@@ -39,3 +39,11 @@ class Video(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+class Videotv(models.Model):
+    titulo = models.CharField(max_length=50)
+    thumb_tv = models.ImageField(upload_to='thumb_tv')
+    video_tv = models.URLField()
+
+    def __str__(self):
+        return self.titulo

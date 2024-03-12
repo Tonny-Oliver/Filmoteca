@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="m-2 ">
+    <div class="scrollable-container">
+        <div class="inner-container">
+            {% for canal in canais %}
+            <div class="m-3 item">
+                <a href="#" class="video-link" data-src="{{ canal.video_tv }}">
+                    <div class="image image-container"><img src="{{ canal.thumb_tv.url }}" class='img-fluid w-80 h-50' alt="Describe Image"></div>
+                    <h1 class="text-center text-xs font-light mt-2"> {{ canal.titulo }} </h1>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div id="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;" class="filme m-2 bg-black">
+    <iframe id="video-iframe" style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" width="100%" height="100%" allowfullscreen></iframe>		
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    var videoLinks = document.querySelectorAll('.video-link');
+    var videoIframe = document.getElementById('video-iframe');
+
+    videoLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var videoSrc = this.getAttribute('data-src');
+            videoIframe.src = videoSrc;
+            document.getElementById('video-container').style.display = 'block';
+        });
+    });
+});
+</script>
+
+{% endblock %}

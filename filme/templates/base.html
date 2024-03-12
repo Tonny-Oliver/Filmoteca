@@ -82,6 +82,38 @@
     .btn:hover {
         color: #fbfcfd; /* Nova cor ao passar o mouse */
     }
+
+    ::-webkit-scrollbar {
+        width: 8px; /* Largura do scroll */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Cor de fundo do track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* Cor do thumb */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Cor do thumb em hover */
+    }
+
+    .scrollable-container {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .inner-container {
+        display: inline-flex;
+    }
+
+    .item {
+        width: 100px; /* Largura dos itens */
+        height: 100px; /* Altura dos itens */
+        margin: 5px; /* Margem entre os itens */
+    }
   </style>
 <html>
     <head >
