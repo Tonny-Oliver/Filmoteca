@@ -1,4 +1,4 @@
-from .models import Filme
+from .models import Filme, Videotv
 from time import time
 
 def adicionados_recentemente(request): 
@@ -39,3 +39,9 @@ def pag_filmes(request):
     return {'pag_acao': pag_acao, 'pag_ficcao': pag_ficcao, 'pag_animacao': pag_animacao, 'pag_suspense': pag_suspense, 'pag_drama': pag_drama,
             'pag_comedia': pag_comedia, 'pag_terror': pag_terror, 'pag_documentario': pag_documentario, 'pag_romance': pag_romance
             }
+
+def canais_tv(request):
+
+    canais = Videotv.objects.all()
+
+    return {'canais': canais}

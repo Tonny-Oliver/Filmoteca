@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render, get_object_or_404
-from .models import Filme
+from .models import Filme, Videotv
 from django.urls import reverse
 from django.http import JsonResponse
 from django.views.generic import TemplateView, ListView, DetailView
@@ -81,5 +81,9 @@ class Homecategoriaromance(ListView):
 class Homecategoriatodos(ListView):
     template_name = 'homecategoriatodos.html'
     model = Filme
+
+class TV(DetailView):
+    template_name = 'hometv.html'
+    model = Videotv
 
 
